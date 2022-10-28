@@ -15,9 +15,8 @@ export const useForm = (initialForm = {}) => {
         })
     }
 
-    const onClick = (e) =>{
-        e.preventDefault()
-        setFormState({...initialForm})
+    const onResetForm = () =>{
+        setFormState(initialForm)
     }
 
   
@@ -27,6 +26,6 @@ export const useForm = (initialForm = {}) => {
         ...formState,
         formState,
         onInputChange,
-        onClick
+        onResetForm
   }
 }
